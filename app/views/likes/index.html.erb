@@ -1,0 +1,9 @@
+<h1>과제게시판</h1>
+<a href="/likes/new">새로운 글 쓰기</a><br /
+<hr>
+
+<h2>글 목록</h2>
+
+<% @likes.each do |like| %>
+  <a href="/likes/show/<%= like.id %>"><%= like.id %>번 글 :<%= like.title %></a><br /><br />
+<% end %>
